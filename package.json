@@ -12,7 +12,7 @@
     "test": "flutter test",
     "build": "flutter build web --web-renderer html",
     "deploy:web": "yarn build && npx vercel ./build/web --confirm",
-    "deploy:web:prod": "deploy:web --token=$VERCEL_TOKEN --prod",
+    "deploy:web:prod": "yarn deploy:web --token=$VERCEL_TOKEN --prod",
     "deploy:web:preview": "node ./scripts/pullRequestPreview.js",
     "dev:web": "flutter run -d chrome --web-renderer html",
     "dev:mac": "flutter run -d macos"
