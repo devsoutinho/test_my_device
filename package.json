@@ -1,0 +1,26 @@
+{
+  "name": "test_my_device",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "git@github.com:devsoutinho/test_my_device.git",
+  "author": "Mario Souto <13791385+omariosouto@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "flutter pub get",
+    "lint": "dart analyze .",
+    "test": "flutter test",
+    "build": "flutter build web --web-renderer html",
+    "deploy:web": "yarn build && npx vercel ./build/web --confirm",
+    "deploy:web:prod": "deploy:web --token=$VERCEL_TOKEN --prod",
+    "deploy:web:preview": "node ./scripts/pullRequestPreview.js",
+    "dev:web": "flutter run -d chrome --web-renderer html",
+    "dev:mac": "flutter run -d macos"
+  },
+  "devDependencies": {
+    "shelljs": "0.8.5",
+    "dotenv": "16.0.1",
+    "http-server": "14.1.1",
+    "node-fetch": "^3.2.3"
+  }
+}
