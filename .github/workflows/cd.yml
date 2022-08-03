@@ -34,8 +34,7 @@ jobs:
     - name: "Start: Release Web"
       run: |
         yarn install
-        yarn deploy:web:app
-        yarn deploy:web:app:canvas
+        yarn deploy:web:prod
   release_app_android:
     runs-on: ubuntu-latest
     steps:
